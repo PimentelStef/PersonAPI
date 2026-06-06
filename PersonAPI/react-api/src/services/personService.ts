@@ -1,18 +1,17 @@
-import axios from 'axios';
+import axios from "axios";
 
-const API_URL = 'https://localhost:7000/api/person';
+const API_URL = "http://localhost:5284/api/person";
 
-export const getPersons = () =>
-  axios.get(API_URL);
+export const getPersons = () => axios.get(API_URL);
 
 export const getPerson = (id: number) =>
-  axios.get(`${API_URL}/${id}`);
+    axios.get(`${API_URL}/${id}`);
 
-export const createPerson = (person: any) =>
-  axios.post(API_URL, person);
+export const createPerson = (data: any) =>
+    axios.post(API_URL, data);
 
-export const updatePerson = (id: number, person: any) =>
-  axios.put(`${API_URL}/${id}`, person);
+export const updatePerson = (id: number, data: any) =>
+    axios.put(`${API_URL}/${id}`, data);
 
 export const deletePerson = (id: number) =>
-  axios.delete(`${API_URL}/${id}`);
+    axios.delete(`${API_URL}/${id}`);
